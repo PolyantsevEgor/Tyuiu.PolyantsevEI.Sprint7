@@ -16,5 +16,10 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
         {
             InitializeComponent();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
