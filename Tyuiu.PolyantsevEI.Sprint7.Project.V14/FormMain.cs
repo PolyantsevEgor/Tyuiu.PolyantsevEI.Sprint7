@@ -31,5 +31,10 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
         {
 
         }
+
+        private void textBoxStopName_PEI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
