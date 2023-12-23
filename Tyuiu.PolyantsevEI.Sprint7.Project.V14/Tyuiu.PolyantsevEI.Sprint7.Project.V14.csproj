@@ -84,8 +84,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Properties\DataBase.csv" />
-    <None Include="Properties\DataBase.xlsx" />
+    <None Include="CSR.DataBase.csv" />
+    <None Include="DataBase.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

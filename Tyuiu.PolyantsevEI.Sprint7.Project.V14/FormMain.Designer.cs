@@ -40,12 +40,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBoxOut_PEI = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDate_PEI = new System.Windows.Forms.TextBox();
+            this.textBoxS_PEI = new System.Windows.Forms.TextBox();
+            this.textBoxUr_PEI = new System.Windows.Forms.TextBox();
+            this.textBoxNSOO_PEI = new System.Windows.Forms.TextBox();
+            this.textBoxNSBO_PEI = new System.Windows.Forms.TextBox();
+            this.textBoxType_PEI = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -116,6 +116,7 @@
             this.buttonRed_PEI.Size = new System.Drawing.Size(100, 49);
             this.buttonRed_PEI.TabIndex = 6;
             this.buttonRed_PEI.UseVisualStyleBackColor = true;
+            this.buttonRed_PEI.Click += new System.EventHandler(this.buttonRed_Click);
             // 
             // buttonDone_PEI
             // 
@@ -180,12 +181,12 @@
             // groupBoxOut_PEI
             // 
             this.groupBoxOut_PEI.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBoxOut_PEI.Controls.Add(this.textBox6);
-            this.groupBoxOut_PEI.Controls.Add(this.textBox5);
-            this.groupBoxOut_PEI.Controls.Add(this.textBox4);
-            this.groupBoxOut_PEI.Controls.Add(this.textBox3);
-            this.groupBoxOut_PEI.Controls.Add(this.textBox2);
-            this.groupBoxOut_PEI.Controls.Add(this.textBox1);
+            this.groupBoxOut_PEI.Controls.Add(this.textBoxDate_PEI);
+            this.groupBoxOut_PEI.Controls.Add(this.textBoxS_PEI);
+            this.groupBoxOut_PEI.Controls.Add(this.textBoxUr_PEI);
+            this.groupBoxOut_PEI.Controls.Add(this.textBoxNSOO_PEI);
+            this.groupBoxOut_PEI.Controls.Add(this.textBoxNSBO_PEI);
+            this.groupBoxOut_PEI.Controls.Add(this.textBoxType_PEI);
             this.groupBoxOut_PEI.Controls.Add(this.label9);
             this.groupBoxOut_PEI.Controls.Add(this.label8);
             this.groupBoxOut_PEI.Controls.Add(this.label7);
@@ -198,77 +199,77 @@
             this.groupBoxOut_PEI.TabIndex = 0;
             this.groupBoxOut_PEI.TabStop = false;
             // 
-            // textBox6
+            // textBoxDate_PEI
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.textBox6.Location = new System.Drawing.Point(268, 230);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(106, 29);
-            this.textBox6.TabIndex = 12;
-            this.textBox6.Text = "29.01.2011";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxDate_PEI.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxDate_PEI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDate_PEI.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
+            this.textBoxDate_PEI.Location = new System.Drawing.Point(268, 233);
+            this.textBoxDate_PEI.Name = "textBoxDate_PEI";
+            this.textBoxDate_PEI.ReadOnly = true;
+            this.textBoxDate_PEI.Size = new System.Drawing.Size(94, 22);
+            this.textBoxDate_PEI.TabIndex = 12;
+            this.textBoxDate_PEI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
+            // textBoxS_PEI
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.textBox5.Location = new System.Drawing.Point(268, 180);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(73, 29);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.Text = "56,01";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxS_PEI.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxS_PEI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxS_PEI.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
+            this.textBoxS_PEI.Location = new System.Drawing.Point(269, 183);
+            this.textBoxS_PEI.Name = "textBoxS_PEI";
+            this.textBoxS_PEI.ReadOnly = true;
+            this.textBoxS_PEI.Size = new System.Drawing.Size(59, 22);
+            this.textBoxS_PEI.TabIndex = 11;
+            this.textBoxS_PEI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // textBoxUr_PEI
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.textBox4.Location = new System.Drawing.Point(212, 280);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(339, 56);
-            this.textBox4.TabIndex = 10;
-            this.textBox4.Text = "ИП Савельев Андрей Евгеньевич, 625056\r\nИНН 720205152609\r\n";
+            this.textBoxUr_PEI.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxUr_PEI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxUr_PEI.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
+            this.textBoxUr_PEI.Location = new System.Drawing.Point(212, 283);
+            this.textBoxUr_PEI.Multiline = true;
+            this.textBoxUr_PEI.Name = "textBoxUr_PEI";
+            this.textBoxUr_PEI.ReadOnly = true;
+            this.textBoxUr_PEI.Size = new System.Drawing.Size(339, 56);
+            this.textBoxUr_PEI.TabIndex = 10;
             // 
-            // textBox3
+            // textBoxNSOO_PEI
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.textBox3.Location = new System.Drawing.Point(397, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(69, 29);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "да";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNSOO_PEI.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxNSOO_PEI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNSOO_PEI.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
+            this.textBoxNSOO_PEI.Location = new System.Drawing.Point(397, 133);
+            this.textBoxNSOO_PEI.Name = "textBoxNSOO_PEI";
+            this.textBoxNSOO_PEI.ReadOnly = true;
+            this.textBoxNSOO_PEI.Size = new System.Drawing.Size(40, 22);
+            this.textBoxNSOO_PEI.TabIndex = 9;
+            this.textBoxNSOO_PEI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // textBoxNSBO_PEI
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.textBox2.Location = new System.Drawing.Point(380, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(69, 29);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "да";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNSBO_PEI.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxNSBO_PEI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNSBO_PEI.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
+            this.textBoxNSBO_PEI.Location = new System.Drawing.Point(380, 83);
+            this.textBoxNSBO_PEI.Name = "textBoxNSBO_PEI";
+            this.textBoxNSBO_PEI.ReadOnly = true;
+            this.textBoxNSBO_PEI.Size = new System.Drawing.Size(40, 22);
+            this.textBoxNSBO_PEI.TabIndex = 8;
+            this.textBoxNSBO_PEI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // textBoxType_PEI
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
-            this.textBox1.Location = new System.Drawing.Point(178, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(175, 29);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "автобус";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxType_PEI.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxType_PEI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxType_PEI.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F);
+            this.textBoxType_PEI.Location = new System.Drawing.Point(178, 32);
+            this.textBoxType_PEI.Name = "textBoxType_PEI";
+            this.textBoxType_PEI.ReadOnly = true;
+            this.textBoxType_PEI.Size = new System.Drawing.Size(175, 22);
+            this.textBoxType_PEI.TabIndex = 3;
+            this.textBoxType_PEI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
@@ -359,7 +360,6 @@
             this.textBoxNum_PEI.ReadOnly = true;
             this.textBoxNum_PEI.Size = new System.Drawing.Size(95, 46);
             this.textBoxNum_PEI.TabIndex = 0;
-            this.textBoxNum_PEI.Text = "128к";
             this.textBoxNum_PEI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxStopName_PEI
@@ -374,7 +374,6 @@
             this.textBoxStopName_PEI.ReadOnly = true;
             this.textBoxStopName_PEI.Size = new System.Drawing.Size(444, 36);
             this.textBoxStopName_PEI.TabIndex = 1;
-            this.textBoxStopName_PEI.Text = "с/о Якорь";
             // 
             // textBoxStartName_PEI
             // 
@@ -388,7 +387,6 @@
             this.textBoxStartName_PEI.ReadOnly = true;
             this.textBoxStartName_PEI.Size = new System.Drawing.Size(444, 36);
             this.textBoxStartName_PEI.TabIndex = 0;
-            this.textBoxStartName_PEI.Text = "з‑д. Медоборудования";
             this.textBoxStartName_PEI.TextChanged += new System.EventHandler(this.textBoxStopName_PEI_TextChanged);
             // 
             // panel3
@@ -447,9 +445,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(869, 489);
+            this.MinimumSize = new System.Drawing.Size(869, 489);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Полянцев Е.И. | Спринт 7 | Вариант 14";
+            this.Text = "Транспорт Тюмени";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panel1.ResumeLayout(false);
             this.groupBoxMenu_PEI.ResumeLayout(false);
@@ -492,12 +492,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDate_PEI;
+        private System.Windows.Forms.TextBox textBoxS_PEI;
+        private System.Windows.Forms.TextBox textBoxUr_PEI;
+        private System.Windows.Forms.TextBox textBoxNSOO_PEI;
+        private System.Windows.Forms.TextBox textBoxNSBO_PEI;
+        private System.Windows.Forms.TextBox textBoxType_PEI;
         private System.Windows.Forms.Button buttonRed_PEI;
         private System.Windows.Forms.Button buttonOpen_PEI;
         private System.Windows.Forms.OpenFileDialog openFileDialog_PEI;

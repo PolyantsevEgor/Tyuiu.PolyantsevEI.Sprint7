@@ -21,20 +21,32 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
 
         DataService ds = new DataService();
         static string path;
+        static string[,] matrix;
+        static string[] nums = { };
 
 
         private void buttonDone_Click(object sender, EventArgs e)
         {
-            string[,] matrix = ds.GetMatrix(path);
-            
-            for (int i = 0; i < matrix.GetLength(0)-1; i++)
+            try
             {
-                for (int j = 0;j < matrix.GetLength(1); j++)
-                {
-                    comboBoxNum_PEI.Items.Add(matrix[i,0]);
-                    comboBoxNum_PEI.Items.Add("test");
-                }
+                int k = comboBoxNum_PEI.SelectedIndex + 1;
+
+                textBoxNum_PEI.Text = Convert.ToString(matrix[k, 0]);
+                textBoxStartName_PEI.Text = Convert.ToString(matrix[k, 3]);
+                textBoxStopName_PEI.Text = Convert.ToString(matrix[k, 4]);
+                textBoxType_PEI.Text = Convert.ToString(matrix[k, 1]);
+                textBoxNSBO_PEI.Text = Convert.ToString(matrix[k, 6]);
+                textBoxNSOO_PEI.Text = Convert.ToString(matrix[k, 7]);
+                textBoxS_PEI.Text = Convert.ToString(matrix[k, 5]);
+                textBoxDate_PEI.Text = Convert.ToString(matrix[k, 8]);
+                textBoxUr_PEI.Text = Convert.ToString(matrix[k, 9]);
+
             }
+            catch
+            {
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -62,11 +74,20 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
             openFileDialog_PEI.ShowDialog();
             path = openFileDialog_PEI.FileName;
             buttonDone_PEI.Enabled = true;
+
+            matrix = ds.GetMatrix(path);
+
+            for (int i = 1; i < matrix.GetLength(0) - 1; i++)
+            {
+                comboBoxNum_PEI.Items.Add(Convert.ToString(matrix[i, 0]));
+                nums.Append(Convert.ToString(matrix[i, 0]));
+            }
         }
         
         private void buttonRed_Click(object sender, EventArgs e)
         {
-
+            FormRed formred = new FormRed();
+            formred.ShowDialog();
         }
     }
 }
