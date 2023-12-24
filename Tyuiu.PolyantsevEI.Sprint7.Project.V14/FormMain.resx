@@ -222,4 +222,7 @@
   <metadata name="openFileDialog_PEI.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>21, 16</value>
   </metadata>
+  <metadata name="toolTip_PEI.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>175, 16</value>
+  </metadata>
 </root>

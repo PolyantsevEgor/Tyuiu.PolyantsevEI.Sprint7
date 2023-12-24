@@ -20,7 +20,7 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14.Lib
 
             string[,] matrix = new string[rows, columns];
 
-            for (int r = 0; r < rows - 1; r++)
+            for (int r = 0; r < rows; r++)
             {
                 string[] line_r = lines[r].Split(';');
                 for (int c = 0; c < columns; c++)

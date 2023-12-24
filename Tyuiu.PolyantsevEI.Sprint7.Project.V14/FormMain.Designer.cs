@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxMenu_PEI = new System.Windows.Forms.GroupBox();
@@ -61,6 +62,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.labelDes1_PEI = new System.Windows.Forms.Label();
             this.openFileDialog_PEI = new System.Windows.Forms.OpenFileDialog();
+            this.toolTip_PEI = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.groupBoxMenu_PEI.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -100,6 +102,7 @@
             // 
             // buttonOpen_PEI
             // 
+            this.buttonOpen_PEI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOpen_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpen_PEI.Image")));
             this.buttonOpen_PEI.Location = new System.Drawing.Point(11, 235);
             this.buttonOpen_PEI.Name = "buttonOpen_PEI";
@@ -110,6 +113,7 @@
             // 
             // buttonRed_PEI
             // 
+            this.buttonRed_PEI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRed_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonRed_PEI.Image")));
             this.buttonRed_PEI.Location = new System.Drawing.Point(75, 290);
             this.buttonRed_PEI.Name = "buttonRed_PEI";
@@ -120,6 +124,7 @@
             // 
             // buttonDone_PEI
             // 
+            this.buttonDone_PEI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDone_PEI.Enabled = false;
             this.buttonDone_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonDone_PEI.Image")));
             this.buttonDone_PEI.Location = new System.Drawing.Point(181, 290);
@@ -131,12 +136,14 @@
             // 
             // buttonInfo_PEI
             // 
+            this.buttonInfo_PEI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonInfo_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_PEI.Image")));
             this.buttonInfo_PEI.Location = new System.Drawing.Point(11, 290);
             this.buttonInfo_PEI.Name = "buttonInfo_PEI";
             this.buttonInfo_PEI.Size = new System.Drawing.Size(58, 49);
             this.buttonInfo_PEI.TabIndex = 2;
             this.buttonInfo_PEI.UseVisualStyleBackColor = true;
+            this.buttonInfo_PEI.Click += new System.EventHandler(this.buttonInfo_Click);
             // 
             // comboBoxNum_PEI
             // 
@@ -198,6 +205,7 @@
             this.groupBoxOut_PEI.Size = new System.Drawing.Size(561, 354);
             this.groupBoxOut_PEI.TabIndex = 0;
             this.groupBoxOut_PEI.TabStop = false;
+            this.groupBoxOut_PEI.Enter += new System.EventHandler(this.groupBoxOut_PEI_Enter);
             // 
             // textBoxDate_PEI
             // 
@@ -219,7 +227,7 @@
             this.textBoxS_PEI.Location = new System.Drawing.Point(269, 183);
             this.textBoxS_PEI.Name = "textBoxS_PEI";
             this.textBoxS_PEI.ReadOnly = true;
-            this.textBoxS_PEI.Size = new System.Drawing.Size(59, 22);
+            this.textBoxS_PEI.Size = new System.Drawing.Size(71, 22);
             this.textBoxS_PEI.TabIndex = 11;
             this.textBoxS_PEI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -281,6 +289,7 @@
             this.label9.Size = new System.Drawing.Size(185, 26);
             this.label9.TabIndex = 7;
             this.label9.Text = "Юридическое лицо:";
+            this.label9.Visible = false;
             // 
             // label8
             // 
@@ -292,6 +301,7 @@
             this.label8.Size = new System.Drawing.Size(241, 26);
             this.label8.TabIndex = 6;
             this.label8.Text = "Дата появления маршрута:";
+            this.label8.Visible = false;
             // 
             // label7
             // 
@@ -303,6 +313,7 @@
             this.label7.Size = new System.Drawing.Size(242, 26);
             this.label7.TabIndex = 5;
             this.label7.Text = "Протяженность маршрута:";
+            this.label7.Visible = false;
             // 
             // label6
             // 
@@ -314,6 +325,7 @@
             this.label6.Size = new System.Drawing.Size(370, 26);
             this.label6.TabIndex = 4;
             this.label6.Text = "Наличие системы объявления остановок:";
+            this.label6.Visible = false;
             // 
             // label5
             // 
@@ -325,6 +337,7 @@
             this.label5.Size = new System.Drawing.Size(353, 26);
             this.label5.TabIndex = 3;
             this.label5.Text = "Наличие системы безналичной оплаты:";
+            this.label5.Visible = false;
             // 
             // label4
             // 
@@ -336,6 +349,7 @@
             this.label4.Size = new System.Drawing.Size(151, 26);
             this.label4.TabIndex = 0;
             this.label4.Text = "Тип транспорта:";
+            this.label4.Visible = false;
             // 
             // groupBox2
             // 
@@ -361,6 +375,7 @@
             this.textBoxNum_PEI.Size = new System.Drawing.Size(95, 46);
             this.textBoxNum_PEI.TabIndex = 0;
             this.textBoxNum_PEI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNum_PEI.Visible = false;
             // 
             // textBoxStopName_PEI
             // 
@@ -374,6 +389,7 @@
             this.textBoxStopName_PEI.ReadOnly = true;
             this.textBoxStopName_PEI.Size = new System.Drawing.Size(444, 36);
             this.textBoxStopName_PEI.TabIndex = 1;
+            this.textBoxStopName_PEI.Visible = false;
             // 
             // textBoxStartName_PEI
             // 
@@ -387,6 +403,7 @@
             this.textBoxStartName_PEI.ReadOnly = true;
             this.textBoxStartName_PEI.Size = new System.Drawing.Size(444, 36);
             this.textBoxStartName_PEI.TabIndex = 0;
+            this.textBoxStartName_PEI.Visible = false;
             this.textBoxStartName_PEI.TextChanged += new System.EventHandler(this.textBoxStopName_PEI_TextChanged);
             // 
             // panel3
@@ -435,6 +452,10 @@
             // openFileDialog_PEI
             // 
             this.openFileDialog_PEI.FileName = "openFileDialog_PEI";
+            // 
+            // toolTip_PEI
+            // 
+            this.toolTip_PEI.IsBalloon = true;
             // 
             // FormMain
             // 
@@ -501,6 +522,7 @@
         private System.Windows.Forms.Button buttonRed_PEI;
         private System.Windows.Forms.Button buttonOpen_PEI;
         private System.Windows.Forms.OpenFileDialog openFileDialog_PEI;
+        private System.Windows.Forms.ToolTip toolTip_PEI;
     }
 }
 

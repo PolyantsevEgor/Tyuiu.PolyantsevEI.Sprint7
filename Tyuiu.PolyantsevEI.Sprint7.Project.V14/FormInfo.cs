@@ -16,5 +16,10 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
