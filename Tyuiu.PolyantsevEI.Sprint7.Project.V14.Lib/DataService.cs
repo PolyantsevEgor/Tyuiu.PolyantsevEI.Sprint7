@@ -80,13 +80,12 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14.Lib
         public double GetSrS(string[,] matrix)
         {
             int n = matrix.GetLength(0);
-            int k = matrix.GetLength(1)-1;
             double s = 0;
             for (int i = 1; i < n; i++)
             {
                 s += Convert.ToDouble(matrix[i, 5]);
             }
-            return Math.Round(s/k, 2);
+            return Math.Round(s/(n-1), 2);
         }
         public int GetNSBO(string[,] matrix)
         {

@@ -100,11 +100,11 @@
             this.textBox_PEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.textBox_PEI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_PEI.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.textBox_PEI.Location = new System.Drawing.Point(271, 323);
-            this.textBox_PEI.Multiline = true;
+            this.textBox_PEI.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox_PEI.Location = new System.Drawing.Point(268, 327);
             this.textBox_PEI.Name = "textBox_PEI";
             this.textBox_PEI.ReadOnly = true;
-            this.textBox_PEI.Size = new System.Drawing.Size(76, 20);
+            this.textBox_PEI.Size = new System.Drawing.Size(76, 29);
             this.textBox_PEI.TabIndex = 18;
             // 
             // labelCount_PEI
@@ -321,7 +321,9 @@
             this.chartMA_PEI.Legends.Add(legend1);
             this.chartMA_PEI.Location = new System.Drawing.Point(0, -2);
             this.chartMA_PEI.Name = "chartMA_PEI";
+            this.chartMA_PEI.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
+            series1.IsVisibleInLegend = false;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartMA_PEI.Series.Add(series1);
@@ -341,6 +343,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormStatistic";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Статистика";
             this.panel1.ResumeLayout(false);
             this.groupBoxStats_PEI.ResumeLayout(false);

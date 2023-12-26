@@ -20,7 +20,7 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14.Test
             Assert.AreEqual(95, ds.GetCount(matrix));
             Assert.AreEqual(68.38, ds.GetMaxS(matrix));
             Assert.AreEqual(9.8, ds.GetMinS(matrix));
-            Assert.AreEqual(35.96, ds.GetSrS(matrix));
+            Assert.AreEqual(36.17, ds.GetSrS(matrix));
             Assert.AreEqual(79, ds.GetNSBO(matrix));
             Assert.AreEqual(68, ds.GetNSAOO(matrix));
 

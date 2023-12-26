@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using Tyuiu.PolyantsevEI.Sprint7.Project.V14.Lib;
 
 namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
@@ -49,11 +50,25 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
                 textBoxSrS_PEI.Text = Convert.ToString(ds.GetSrS(matrix));
                 textBoxNSBOCount_PEI.Text = Convert.ToString(ds.GetNSBO(matrix));
                 textBoxNSAOOCount_PEI.Text = Convert.ToString(ds.GetNSAOO(matrix));
+
+                string[] seriesArray = { "Автобусы", "Маршрутки" };
+                int[] pointsArray = {ds.GetACount(matrix), ds.GetMCount(matrix)};
+                chartMA_PEI.Series.Clear();
+
+
+                for (int i = 0; i < seriesArray.Length; i++)
+                {
+                    Series series = this.chartMA_PEI.Series.Add(seriesArray[i]);
+                    series.Points.Add(pointsArray[i]);
+                }
             }
+
             catch
             {
                 MessageBox.Show("Файл не выбран", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
         }
     }
 }
