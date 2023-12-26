@@ -27,6 +27,7 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
         static int rows;
         static int columns;
         static int index;
+        int x = 1;
 
         private void buttonDelete_PEI_Click(object sender, EventArgs e)
         {
@@ -36,6 +37,87 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
             {
                 index = dataGridMatrix_PEI.CurrentCell.RowIndex;
                 dataGridMatrix_PEI.Rows.RemoveAt(index);
+            }
+        }
+
+        private void buttonSortXtoY_PEI_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBoxSortX_PEI.Text != null)
+                {
+                    comboBoxSortY_PEI.Items.Clear();
+                    comboBoxSortY_PEI.Refresh();
+                    if (comboBoxSortX_PEI.Text == matrix[0,1]) x = 1;
+                    if (comboBoxSortX_PEI.Text == matrix[0, 3]) x = 3;
+                    if (comboBoxSortX_PEI.Text == matrix[0, 4]) x = 4;
+                    if (comboBoxSortX_PEI.Text == matrix[0, 6]) x = 6;
+                    if (comboBoxSortX_PEI.Text == matrix[0, 7]) x = 7;
+                    if (comboBoxSortX_PEI.Text == matrix[0, 9]) x = 9;
+                    comboBoxSortY_PEI.Enabled = true;
+                    buttonSort_PEI.Enabled = true;
+                    for(int i = 1; i < rows; i++)
+                    {
+                        if (!comboBoxSortY_PEI.Items.Contains(matrix[i, x])){
+                            comboBoxSortY_PEI.Items.Add(matrix[i, x]);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        private void buttonSort_PEI_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string[,] matrixsort = new string[rows, columns];
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        if (matrix[i, x] == comboBoxSortY_PEI.Text || i == 0)
+                        {
+                            matrixsort[i,j] = matrix[i,j];
+                        }
+                    }
+                }
+
+                rows = matrixsort.GetLength(0);
+                columns = matrixsort.GetLength(1);
+
+                dataGridMatrix_PEI.DataSource = null;
+                dataGridMatrix_PEI.Rows.Clear();
+                dataGridMatrix_PEI.Refresh();
+                dataGridMatrix_PEI.RowCount = rows + 1;
+                dataGridMatrix_PEI.ColumnCount = columns;
+
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        dataGridMatrix_PEI.Rows[i].Cells[j].Value = matrixsort[i, j];
+                    }
+                }
+                dataGridMatrix_PEI.AutoResizeColumns();
+                dataGridMatrix_PEI.ScrollBars = ScrollBars.Both;
+
+                for (int i = dataGridMatrix_PEI.RowCount - 2; i > 0; i--)
+                {
+
+                    if (dataGridMatrix_PEI.Rows[i].Cells[2].Value?.ToString() == null)
+                    {
+                        dataGridMatrix_PEI.Rows.RemoveAt(i);
+                    }
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         
@@ -79,6 +161,14 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
                 buttonAdd_PEI.Enabled = true;
                 buttonDelete_PEI.Enabled = true;
                 buttonSave_PEI.Enabled = true;
+                comboBoxSortX_PEI.Enabled = true;
+                buttonSortXtoY_PEI.Enabled = true;
+                comboBoxSortX_PEI.Items.Add(matrix[0, 1]);
+                comboBoxSortX_PEI.Items.Add(matrix[0, 3]);
+                comboBoxSortX_PEI.Items.Add(matrix[0, 4]);
+                comboBoxSortX_PEI.Items.Add(matrix[0, 6]);
+                comboBoxSortX_PEI.Items.Add(matrix[0, 7]);
+                comboBoxSortX_PEI.Items.Add(matrix[0, 9]);
             }
             catch
             {
@@ -98,8 +188,8 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
 
                     if (File.Exists(savepath)) File.Delete(savepath);
 
-                    int rows = dataGridMatrix_PEI.RowCount;
-                    int columns = dataGridMatrix_PEI.ColumnCount;
+                    rows = dataGridMatrix_PEI.RowCount;
+                    columns = dataGridMatrix_PEI.ColumnCount;
 
                     StringBuilder strBuilder = new StringBuilder();
 

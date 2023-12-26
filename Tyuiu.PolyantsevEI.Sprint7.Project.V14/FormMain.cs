@@ -63,21 +63,6 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxStopName_PEI_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonOpen_Click(object sender, EventArgs e)
         {
             try
@@ -113,9 +98,10 @@ namespace Tyuiu.PolyantsevEI.Sprint7.Project.V14
             forminfo.ShowDialog();
         }
 
-        private void groupBoxOut_PEI_Enter(object sender, EventArgs e)
+        private void buttonStats_Click(object sender, EventArgs e)
         {
-
+            FormStatistic formstat = new FormStatistic();
+            formstat.ShowDialog();
         }
     }
 }

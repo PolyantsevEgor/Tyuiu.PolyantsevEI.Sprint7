@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxMenu_PEI = new System.Windows.Forms.GroupBox();
+            this.buttonStats_PEI = new System.Windows.Forms.Button();
             this.buttonOpen_PEI = new System.Windows.Forms.Button();
             this.buttonRed_PEI = new System.Windows.Forms.Button();
             this.buttonDone_PEI = new System.Windows.Forms.Button();
@@ -86,7 +87,8 @@
             // 
             // groupBoxMenu_PEI
             // 
-            this.groupBoxMenu_PEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.groupBoxMenu_PEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.groupBoxMenu_PEI.Controls.Add(this.buttonStats_PEI);
             this.groupBoxMenu_PEI.Controls.Add(this.buttonOpen_PEI);
             this.groupBoxMenu_PEI.Controls.Add(this.buttonRed_PEI);
             this.groupBoxMenu_PEI.Controls.Add(this.buttonDone_PEI);
@@ -98,15 +100,24 @@
             this.groupBoxMenu_PEI.Size = new System.Drawing.Size(287, 357);
             this.groupBoxMenu_PEI.TabIndex = 3;
             this.groupBoxMenu_PEI.TabStop = false;
-            this.groupBoxMenu_PEI.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // buttonStats_PEI
+            // 
+            this.buttonStats_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonStats_PEI.Image")));
+            this.buttonStats_PEI.Location = new System.Drawing.Point(96, 236);
+            this.buttonStats_PEI.Name = "buttonStats_PEI";
+            this.buttonStats_PEI.Size = new System.Drawing.Size(77, 49);
+            this.buttonStats_PEI.TabIndex = 8;
+            this.buttonStats_PEI.UseVisualStyleBackColor = true;
+            this.buttonStats_PEI.Click += new System.EventHandler(this.buttonStats_Click);
             // 
             // buttonOpen_PEI
             // 
             this.buttonOpen_PEI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOpen_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpen_PEI.Image")));
-            this.buttonOpen_PEI.Location = new System.Drawing.Point(11, 235);
+            this.buttonOpen_PEI.Location = new System.Drawing.Point(13, 235);
             this.buttonOpen_PEI.Name = "buttonOpen_PEI";
-            this.buttonOpen_PEI.Size = new System.Drawing.Size(58, 49);
+            this.buttonOpen_PEI.Size = new System.Drawing.Size(77, 49);
             this.buttonOpen_PEI.TabIndex = 7;
             this.buttonOpen_PEI.UseVisualStyleBackColor = true;
             this.buttonOpen_PEI.Click += new System.EventHandler(this.buttonOpen_Click);
@@ -115,9 +126,9 @@
             // 
             this.buttonRed_PEI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRed_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonRed_PEI.Image")));
-            this.buttonRed_PEI.Location = new System.Drawing.Point(75, 290);
+            this.buttonRed_PEI.Location = new System.Drawing.Point(96, 290);
             this.buttonRed_PEI.Name = "buttonRed_PEI";
-            this.buttonRed_PEI.Size = new System.Drawing.Size(100, 49);
+            this.buttonRed_PEI.Size = new System.Drawing.Size(77, 49);
             this.buttonRed_PEI.TabIndex = 6;
             this.buttonRed_PEI.UseVisualStyleBackColor = true;
             this.buttonRed_PEI.Click += new System.EventHandler(this.buttonRed_Click);
@@ -127,9 +138,9 @@
             this.buttonDone_PEI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDone_PEI.Enabled = false;
             this.buttonDone_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonDone_PEI.Image")));
-            this.buttonDone_PEI.Location = new System.Drawing.Point(181, 290);
+            this.buttonDone_PEI.Location = new System.Drawing.Point(185, 290);
             this.buttonDone_PEI.Name = "buttonDone_PEI";
-            this.buttonDone_PEI.Size = new System.Drawing.Size(100, 49);
+            this.buttonDone_PEI.Size = new System.Drawing.Size(85, 49);
             this.buttonDone_PEI.TabIndex = 3;
             this.buttonDone_PEI.UseVisualStyleBackColor = true;
             this.buttonDone_PEI.Click += new System.EventHandler(this.buttonDone_Click);
@@ -138,9 +149,9 @@
             // 
             this.buttonInfo_PEI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonInfo_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_PEI.Image")));
-            this.buttonInfo_PEI.Location = new System.Drawing.Point(11, 290);
+            this.buttonInfo_PEI.Location = new System.Drawing.Point(13, 290);
             this.buttonInfo_PEI.Name = "buttonInfo_PEI";
-            this.buttonInfo_PEI.Size = new System.Drawing.Size(58, 49);
+            this.buttonInfo_PEI.Size = new System.Drawing.Size(77, 49);
             this.buttonInfo_PEI.TabIndex = 2;
             this.buttonInfo_PEI.UseVisualStyleBackColor = true;
             this.buttonInfo_PEI.Click += new System.EventHandler(this.buttonInfo_Click);
@@ -205,7 +216,6 @@
             this.groupBoxOut_PEI.Size = new System.Drawing.Size(561, 354);
             this.groupBoxOut_PEI.TabIndex = 0;
             this.groupBoxOut_PEI.TabStop = false;
-            this.groupBoxOut_PEI.Enter += new System.EventHandler(this.groupBoxOut_PEI_Enter);
             // 
             // textBoxDate_PEI
             // 
@@ -404,7 +414,6 @@
             this.textBoxStartName_PEI.Size = new System.Drawing.Size(444, 36);
             this.textBoxStartName_PEI.TabIndex = 0;
             this.textBoxStartName_PEI.Visible = false;
-            this.textBoxStartName_PEI.TextChanged += new System.EventHandler(this.textBoxStopName_PEI_TextChanged);
             // 
             // panel3
             // 
@@ -447,7 +456,6 @@
             this.labelDes1_PEI.Size = new System.Drawing.Size(83, 91);
             this.labelDes1_PEI.TabIndex = 0;
             this.labelDes1_PEI.Text = "//";
-            this.labelDes1_PEI.Click += new System.EventHandler(this.label3_Click);
             // 
             // openFileDialog_PEI
             // 
@@ -523,6 +531,7 @@
         private System.Windows.Forms.Button buttonOpen_PEI;
         private System.Windows.Forms.OpenFileDialog openFileDialog_PEI;
         private System.Windows.Forms.ToolTip toolTip_PEI;
+        private System.Windows.Forms.Button buttonStats_PEI;
     }
 }
 

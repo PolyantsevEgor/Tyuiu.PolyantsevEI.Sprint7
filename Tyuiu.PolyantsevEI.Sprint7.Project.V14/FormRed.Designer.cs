@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRed));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxPanel_PEI = new System.Windows.Forms.GroupBox();
+            this.buttonSortXtoY_PEI = new System.Windows.Forms.Button();
+            this.buttonSort_PEI = new System.Windows.Forms.Button();
+            this.comboBoxSortY_PEI = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxSortX_PEI = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonSave_PEI = new System.Windows.Forms.Button();
             this.buttonDelete_PEI = new System.Windows.Forms.Button();
             this.buttonAdd_PEI = new System.Windows.Forms.Button();
@@ -56,7 +62,13 @@
             // 
             // groupBoxPanel_PEI
             // 
-            this.groupBoxPanel_PEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.groupBoxPanel_PEI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.groupBoxPanel_PEI.Controls.Add(this.buttonSortXtoY_PEI);
+            this.groupBoxPanel_PEI.Controls.Add(this.buttonSort_PEI);
+            this.groupBoxPanel_PEI.Controls.Add(this.comboBoxSortY_PEI);
+            this.groupBoxPanel_PEI.Controls.Add(this.label2);
+            this.groupBoxPanel_PEI.Controls.Add(this.comboBoxSortX_PEI);
+            this.groupBoxPanel_PEI.Controls.Add(this.label1);
             this.groupBoxPanel_PEI.Controls.Add(this.buttonSave_PEI);
             this.groupBoxPanel_PEI.Controls.Add(this.buttonDelete_PEI);
             this.groupBoxPanel_PEI.Controls.Add(this.buttonAdd_PEI);
@@ -66,6 +78,68 @@
             this.groupBoxPanel_PEI.Size = new System.Drawing.Size(146, 454);
             this.groupBoxPanel_PEI.TabIndex = 2;
             this.groupBoxPanel_PEI.TabStop = false;
+            // 
+            // buttonSortXtoY_PEI
+            // 
+            this.buttonSortXtoY_PEI.Enabled = false;
+            this.buttonSortXtoY_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonSortXtoY_PEI.Image")));
+            this.buttonSortXtoY_PEI.Location = new System.Drawing.Point(9, 72);
+            this.buttonSortXtoY_PEI.Name = "buttonSortXtoY_PEI";
+            this.buttonSortXtoY_PEI.Size = new System.Drawing.Size(126, 31);
+            this.buttonSortXtoY_PEI.TabIndex = 9;
+            this.buttonSortXtoY_PEI.UseVisualStyleBackColor = true;
+            this.buttonSortXtoY_PEI.Click += new System.EventHandler(this.buttonSortXtoY_PEI_Click);
+            // 
+            // buttonSort_PEI
+            // 
+            this.buttonSort_PEI.Enabled = false;
+            this.buttonSort_PEI.Image = ((System.Drawing.Image)(resources.GetObject("buttonSort_PEI.Image")));
+            this.buttonSort_PEI.Location = new System.Drawing.Point(9, 164);
+            this.buttonSort_PEI.Name = "buttonSort_PEI";
+            this.buttonSort_PEI.Size = new System.Drawing.Size(126, 40);
+            this.buttonSort_PEI.TabIndex = 8;
+            this.buttonSort_PEI.UseVisualStyleBackColor = true;
+            this.buttonSort_PEI.Click += new System.EventHandler(this.buttonSort_PEI_Click);
+            // 
+            // comboBoxSortY_PEI
+            // 
+            this.comboBoxSortY_PEI.Enabled = false;
+            this.comboBoxSortY_PEI.FormattingEnabled = true;
+            this.comboBoxSortY_PEI.Location = new System.Drawing.Point(9, 137);
+            this.comboBoxSortY_PEI.Name = "comboBoxSortY_PEI";
+            this.comboBoxSortY_PEI.Size = new System.Drawing.Size(126, 21);
+            this.comboBoxSortY_PEI.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(6, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 18);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Значение";
+            // 
+            // comboBoxSortX_PEI
+            // 
+            this.comboBoxSortX_PEI.Enabled = false;
+            this.comboBoxSortX_PEI.FormattingEnabled = true;
+            this.comboBoxSortX_PEI.Location = new System.Drawing.Point(9, 45);
+            this.comboBoxSortX_PEI.Name = "comboBoxSortX_PEI";
+            this.comboBoxSortX_PEI.Size = new System.Drawing.Size(126, 21);
+            this.comboBoxSortX_PEI.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(6, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Сортировать по";
             // 
             // buttonSave_PEI
             // 
@@ -129,7 +203,7 @@
             this.dataGridMatrix_PEI.Location = new System.Drawing.Point(-2, 0);
             this.dataGridMatrix_PEI.Name = "dataGridMatrix_PEI";
             this.dataGridMatrix_PEI.RowHeadersWidth = 51;
-            this.dataGridMatrix_PEI.Size = new System.Drawing.Size(726, 447);
+            this.dataGridMatrix_PEI.Size = new System.Drawing.Size(698, 447);
             this.dataGridMatrix_PEI.TabIndex = 0;
             this.dataGridMatrix_PEI.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -151,6 +225,7 @@
             this.Text = "Редактировать";
             this.panel1.ResumeLayout(false);
             this.groupBoxPanel_PEI.ResumeLayout(false);
+            this.groupBoxPanel_PEI.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMatrix_PEI)).EndInit();
             this.ResumeLayout(false);
@@ -169,5 +244,11 @@
         private System.Windows.Forms.Button buttonSave_PEI;
         private System.Windows.Forms.OpenFileDialog openFileDialog_PEI;
         private System.Windows.Forms.SaveFileDialog saveFileDialog_PEI;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxSortY_PEI;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxSortX_PEI;
+        private System.Windows.Forms.Button buttonSort_PEI;
+        private System.Windows.Forms.Button buttonSortXtoY_PEI;
     }
 }

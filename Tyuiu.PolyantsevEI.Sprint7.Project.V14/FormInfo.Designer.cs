@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInfo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxMeAbout_PEI = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBoxMeAbout_PEI = new System.Windows.Forms.TextBox();
             this.textBoxProjectAbout_PEI = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -52,6 +52,21 @@
             this.panel1.Size = new System.Drawing.Size(334, 363);
             this.panel1.TabIndex = 0;
             // 
+            // textBoxMeAbout_PEI
+            // 
+            this.textBoxMeAbout_PEI.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxMeAbout_PEI.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxMeAbout_PEI.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxMeAbout_PEI.Location = new System.Drawing.Point(3, 3);
+            this.textBoxMeAbout_PEI.Multiline = true;
+            this.textBoxMeAbout_PEI.Name = "textBoxMeAbout_PEI";
+            this.textBoxMeAbout_PEI.ReadOnly = true;
+            this.textBoxMeAbout_PEI.Size = new System.Drawing.Size(324, 353);
+            this.textBoxMeAbout_PEI.TabIndex = 3;
+            this.textBoxMeAbout_PEI.Text = "Название : Транспорт Тюмени\r\nРазработчик: Полянцев Е.И. | ИСТНб-23-1\r\n\r\nПрограмма" +
+    " разработана в рамках изучения языка C#\r\n\r\nТюменский Индустриальный Университет\r" +
+    "\nВысшая Школа Цифровых Технологий";
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -63,7 +78,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(-2, -9);
@@ -103,21 +118,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(513, 450);
             this.panel3.TabIndex = 2;
-            // 
-            // textBoxMeAbout_PEI
-            // 
-            this.textBoxMeAbout_PEI.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxMeAbout_PEI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxMeAbout_PEI.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxMeAbout_PEI.Location = new System.Drawing.Point(3, 3);
-            this.textBoxMeAbout_PEI.Multiline = true;
-            this.textBoxMeAbout_PEI.Name = "textBoxMeAbout_PEI";
-            this.textBoxMeAbout_PEI.ReadOnly = true;
-            this.textBoxMeAbout_PEI.Size = new System.Drawing.Size(324, 353);
-            this.textBoxMeAbout_PEI.TabIndex = 3;
-            this.textBoxMeAbout_PEI.Text = "Название : Транспорт Тюмени\r\nРазработчик: Полянцев Е.И. | ИСТНб-23-1\r\n\r\nПрограмма" +
-    " разработана в рамках изучения языка C#\r\n\r\nТюменский Индустриальный Университет\r" +
-    "\nВысшая Школа Цифровых Технологий";
             // 
             // textBoxProjectAbout_PEI
             // 
